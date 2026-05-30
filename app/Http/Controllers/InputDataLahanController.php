@@ -7,7 +7,7 @@ use App\Models\Kriteria;
 use App\Models\RiwayatInput;
 use App\Models\HasilRekomendasi;
 use App\Services\AHP;
-use App\Services\TOPSIS;
+// use App\Services\TOPSIS;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -71,7 +71,7 @@ class InputDataLahanController extends Controller
         ];
 
         // Jalankan TOPSIS
-        $topsis = new TOPSIS();
+        $topsis = new \App\Services\TOPSIS();
         $ranking = $topsis->ranking(
             $kriteria->all(),
             $tanaman->all(),
