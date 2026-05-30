@@ -1,0 +1,48 @@
+{
+    "version": 2,
+    "framework": null,
+    "installCommand": "",
+    "buildCommand": "",
+    "outputDirectory": null,
+    "functions": {
+        "api/index.php": { "runtime": "vercel-php@0.9.0" }
+    },
+    "routes": [
+        {
+            "src": "/build/(.*)",
+            "dest": "/build/$1"
+        },
+        {
+            "src": "/(.+\\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|json))",
+            "dest": "/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "api/index.php"
+        }
+    ],
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://si-tania-syifassa-seep-s-projects.vercel.app",
+        "APP_KEY": "base64:9RRtXOMWzUx8d+bwr3YUcxRwCm0y8Y5bnEtZM2hyrSM=",
+
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "GANTI_HOST_BARU",
+        "DB_PORT": "3307",
+        "DB_DATABASE": "si_tania_bowtoward",
+        "DB_USERNAME": "si_tania_bowtoward",
+        "DB_PASSWORD": "GANTI_PASSWORD_BARU",
+
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+        "VIEW_COMPILED_PATH": "/tmp",
+
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stderr",
+        "SESSION_DRIVER": "cookie"
+    }
+}
